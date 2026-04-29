@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 function Hero() {
     return (
         <section
@@ -20,7 +21,11 @@ function Hero() {
                         type="button"
                         className="rounded-full bg-slate-900 px-7 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
                     >
-                        Start Your Journey
+                        <Link
+                            to="/signup"
+                        >
+                            Start Your Journey
+                        </Link>
                     </button>
                     <span className="text-sm text-slate-500">No credit card required</span>
                 </div>
