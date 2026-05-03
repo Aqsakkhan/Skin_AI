@@ -76,12 +76,6 @@ function Navbar({ onMenuToggle }) {
                     >
                         Login
                     </Link>
-                    <Link
-                        to="/signup"
-                        className="rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700"
-                    >
-                        Signup
-                    </Link>
                 </div>
             </nav>
         </header>
