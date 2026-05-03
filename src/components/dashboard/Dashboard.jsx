@@ -1,13 +1,16 @@
+import { useState } from 'react'
 import Navbar from '../landing-page/sections/Navbar'
 import Sidebar from './Sidebar'
 
 function Dashboard() {
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+
     return (
         <div className="min-h-screen bg-slate-50">
-            <Navbar />
+            <Navbar onMenuToggle={() => setIsSidebarOpen((open) => !open)} />
 
-            <div className="mx-auto flex w-full max-w-7xl flex-col md:min-h-[calc(100vh-73px)] md:flex-row">
-                <Sidebar />
+            <div className="mx-auto flex w-full max-w-7xl md:min-h-[calc(100vh-73px)]">
+                <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
 
                 <main className="flex-1 px-4 py-8 sm:px-6 lg:px-10 lg:py-10">
                     <section className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
